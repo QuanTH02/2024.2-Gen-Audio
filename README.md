@@ -88,3 +88,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - VIVOS dataset
 - Hugging Face Transformers library
 - Weights & Biases for experiment tracking 
+# 2024.2-Gen-Audio
