@@ -1,0 +1,14 @@
+2025-04-29 19:01:49,643 INFO    MainThread:18248 [wandb_setup.py:_flush():68] Current SDK version is 0.19.10
+2025-04-29 19:01:49,643 INFO    MainThread:18248 [wandb_setup.py:_flush():68] Configure stats pid to 18248
+2025-04-29 19:01:49,643 INFO    MainThread:18248 [wandb_setup.py:_flush():68] Loading settings from C:\Users\Admin\.config\wandb\settings
+2025-04-29 19:01:49,643 INFO    MainThread:18248 [wandb_setup.py:_flush():68] Loading settings from D:\Quan\Code\KSCS\AutomaticSpeed\outputs\2025-04-29\18-59-00\wandb\settings
+2025-04-29 19:01:49,643 INFO    MainThread:18248 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-04-29 19:01:49,643 INFO    MainThread:18248 [wandb_init.py:setup_run_log_directory():724] Logging user logs to D:\Quan\Code\KSCS\AutomaticSpeed\outputs\2025-04-29\18-59-00\wandb\run-20250429_190149-dkv8yuob\logs\debug.log
+2025-04-29 19:01:49,643 INFO    MainThread:18248 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to D:\Quan\Code\KSCS\AutomaticSpeed\outputs\2025-04-29\18-59-00\wandb\run-20250429_190149-dkv8yuob\logs\debug-internal.log
+2025-04-29 19:01:49,644 INFO    MainThread:18248 [wandb_init.py:init():852] calling init triggers
+2025-04-29 19:01:49,644 INFO    MainThread:18248 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'_metadata': ContainerMetadata(ref_type=typing.Any, object_type=<class 'dict'>, optional=True, key=None, flags={'struct': True}, flags_root=False, resolver_cache=defaultdict(<class 'dict'>, {'now': {('%Y-%m-%d',): '2025-04-29', ('%H-%M-%S',): '18-59-00'}}), key_type=typing.Any, element_type=typing.Any), '_parent': None, '_flags_cache': {'struct': True}, '_content': {'data': {'train_data_path': 'vlsp2020_train_set_02', 'test_data_path': 'vivos', 'sample_rate': 16000, 'max_duration': 30, 'min_duration': 1}, 'model': {'name': 'wav2vec2-large-xlsr-53', 'pretrained': True, 'freeze_feature_extractor': False, 'learning_rate': 0.0003, 'weight_decay': 0.01, 'max_steps': 10000, 'warmup_steps': 500, 'gradient_accumulation_steps': 4, 'fp16': True}, 'training': {'batch_size': 8, 'num_workers': 4, 'eval_steps': 500, 'save_steps': 1000, 'logging_steps': 100, 'output_dir': 'outputs', 'seed': 42}, 'wandb': {'project': 'vietnamese-asr', 'entity': None, 'tags': ['asr', 'vietnamese']}}, '_wandb': {}}
+2025-04-29 19:01:49,644 INFO    MainThread:18248 [wandb_init.py:init():893] starting backend
+2025-04-29 19:01:49,644 INFO    MainThread:18248 [wandb_init.py:init():897] sending inform_init request
+2025-04-29 19:01:49,651 INFO    MainThread:18248 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn, using: spawn
+2025-04-29 19:01:49,651 INFO    MainThread:18248 [wandb_init.py:init():907] backend started and connected
