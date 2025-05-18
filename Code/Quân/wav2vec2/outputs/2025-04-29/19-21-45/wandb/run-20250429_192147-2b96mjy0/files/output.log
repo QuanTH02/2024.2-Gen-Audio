@@ -1,0 +1,19 @@
+C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Some weights of Wav2Vec2ForCTC were not initialized from the model checkpoint at nguyenvulebinh/wav2vec2-base-vi and are newly initialized: ['lm_head.bias', 'lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+os.walk(self.data_path) <generator object _walk at 0x00000216005CDD90>
+[vlsp2020_train_set_02] Tổng file audio: 0, matched: 0, lỗi: 0, bị loại do duration: 0, còn lại sau lọc: 0
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "D:\Quan\Code\KSCS\AutomaticSpeed\main.py", line 13, in main
+    trainer = ASRTrainer(config)
+  File "D:\Quan\Code\KSCS\AutomaticSpeed\src\training\trainer.py", line 44, in __init__
+    self.train_loader = DataLoader(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 351, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\sampler.py", line 107, in __init__
+    raise ValueError("num_samples should be a positive integer "
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

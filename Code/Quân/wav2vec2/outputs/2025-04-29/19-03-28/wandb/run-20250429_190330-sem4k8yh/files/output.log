@@ -1,0 +1,42 @@
+config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1.77k/1.77k [00:00<?, ?B/s]
+C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\huggingface_hub\file_download.py:159: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\Admin\.cache\huggingface\hub\models--facebook--wav2vec2-large-xlsr-53. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to see activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+pytorch_model.bin: 100%|█████████████████████████████████████████████████████████████████████████████████████| 1.27G/1.27G [00:29<00:00, 42.7MB/s]
+C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Some weights of Wav2Vec2ForCTC were not initialized from the model checkpoint at facebook/wav2vec2-large-xlsr-53 and are newly initialized: ['lm_head.bias', 'lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+preprocessor_config.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 212/212 [00:00<?, ?B/s]
+C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\models\wav2vec2\processing_wav2vec2.py:55: FutureWarning: Loading a tokenizer inside Wav2Vec2Processor from a config that does not include a `tokenizer_class` attribute is deprecated and will be removed in v5. Please add `'tokenizer_class': 'Wav2Vec2CTCTokenizer'` attribute to either your `config.json` or `tokenizer_config.json` file to suppress this warning:
+  warnings.warn(
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\models\wav2vec2\processing_wav2vec2.py", line 53, in from_pretrained
+    return super().from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\processing_utils.py", line 892, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\processing_utils.py", line 938, in _get_arguments_from_pretrained
+    args.append(attribute_class.from_pretrained(pretrained_model_name_or_path, **kwargs))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 918, in from_pretrained
+    return tokenizer_class_py.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\tokenization_utils_base.py", line 2275, in from_pretrained
+    raise EnvironmentError(
+OSError: Can't load tokenizer for 'facebook/wav2vec2-large-xlsr-53'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'facebook/wav2vec2-large-xlsr-53' is the correct path to a directory containing all relevant files for a Wav2Vec2CTCTokenizer tokenizer.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Quan\Code\KSCS\AutomaticSpeed\main.py", line 13, in main
+    trainer = ASRTrainer(config)
+  File "D:\Quan\Code\KSCS\AutomaticSpeed\src\training\trainer.py", line 30, in __init__
+    self.model = VietnameseASRModel(config).to(self.device)
+  File "D:\Quan\Code\KSCS\AutomaticSpeed\src\models\model.py", line 17, in __init__
+    self.processor = Wav2Vec2Processor.from_pretrained(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\models\wav2vec2\processing_wav2vec2.py", line 65, in from_pretrained
+    tokenizer = Wav2Vec2CTCTokenizer.from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\tokenization_utils_base.py", line 2275, in from_pretrained
+    raise EnvironmentError(
+OSError: Can't load tokenizer for 'facebook/wav2vec2-large-xlsr-53'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'facebook/wav2vec2-large-xlsr-53' is the correct path to a directory containing all relevant files for a Wav2Vec2CTCTokenizer tokenizer.
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
