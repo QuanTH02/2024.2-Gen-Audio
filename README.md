@@ -105,9 +105,9 @@ pip install transformers datasets evaluate peft huggingface_hub
 
 ## Kết quả chạy
 
-| Mô hình | WER trên Public Test | WER trên Private Test |
-|---------|---------------------|----------------------|
-| Whisper-small | Chưa đánh giá | 73.34% |
-| PhoWhisper-small | 6.78% | 40.45% |
+| Mô hình | WER trên Public Test | WER trên Private Test chưa tiền xử lý | WER trên Private Test đã tiền xử lý |
+|---------|---------------------|----------------------|----------------------|
+| Whisper-small | Chưa đánh giá | 73.34% | Chưa đánh giá |
+| PhoWhisper-small | 6.78% | 40.45% | 38.8% |
 
 *WER (Word Error Rate): Tỷ lệ lỗi từ, càng thấp càng tốt* 
